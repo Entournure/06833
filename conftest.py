@@ -31,10 +31,3 @@ def tc_original():
     testcase = openpyxl.load_workbook("testcase.xlsx")
 
     return testcase
-
-
-@pytest.fixture(scope="session")
-def tc_edit():
-    testcase = openpyxl.load_workbook("./result/" + now.strftime("%Y%m%d-%H%M%S") + ".xlsx")
-
-    return testcase
